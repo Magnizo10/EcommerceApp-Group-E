@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductservService } from './services/productserv.service';
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  standalone: false,
+  standalone: false
 })
-export class AppComponent {
+
+
+export class AppComponent implements OnInit {
   title = 'Ecommerce-App';
    // The following code demonstrates how to use the ProductservService to fetch products *testing purpose
   products: any[] = [];
