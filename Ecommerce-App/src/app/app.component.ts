@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductservService } from './services/productserv.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ecommerce-App';
+   // The following code demonstrates how to use the ProductservService to fetch products *testing purpose
+  products: any[] = [];
+
+  constructor(private productServic: ProductservService) { } 
+  ngOnInit(): void {
+    // Fetch products when the component initializes
+    this.productServic.getProducts().subscribe((data: any[]) => {
+      this.products = data;
+      console.log(this.products);
+    });
+  }
 }
