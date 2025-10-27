@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -96,6 +99,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": "577a49ff-1dcf-48ed-9a6a-338a2686a480"
+=======
+    "analytics": "a916064d-a7ee-4315-8865-0811e7b99cbd"
+>>>>>>> origin/feature/productPage
   }
 }
