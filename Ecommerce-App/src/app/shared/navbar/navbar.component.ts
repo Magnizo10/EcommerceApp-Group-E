@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductservService } from '../../services/productserv.service';
 
 @Component({
@@ -11,7 +12,10 @@ export class NavbarComponent {
   searchResults: any[] = [];
   showResults = false;
 
-  constructor(private productService: ProductservService) {}
+  constructor(
+    private productService: ProductservService,
+    private router: Router
+  ) {}
 
   onSearch() {
     if (this.searchTerm.trim()) {
@@ -27,5 +31,10 @@ export class NavbarComponent {
 
   hideResults() {
     setTimeout(() => this.showResults = false, 200);
+  }
+
+  goToProduct(productId: number) {
+    this.router.navigate(['/product', productId]);
+    this.showResults = false;
   }
 }

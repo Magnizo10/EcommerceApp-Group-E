@@ -2,17 +2,22 @@
   <div class="nav-brand">
     <a routerLink="/">VW</a>
   </div>
+
   <div class="search-container">
     <input type="text" placeholder="Search products..." [(ngModel)]="searchTerm" (blur)="hideResults()">
     <button class="search-btn" (click)="onSearch()">🔍</button>
     <div class="search-results" *ngIf="showResults && searchResults.length > 0">
-      <div class="result-item" *ngFor="let product of searchResults.slice(0, 15)">
+      <div class="result-item" *ngFor="let product of searchResults.slice(0, 8)" (click)="goToProduct(product.id)">
         <img [src]="product.image" [alt]="product.title">
-        <span>{{ product.title }}</span>
+        <div class="product-info">
+          <span class="product-title">{{ product.title }}</span>
+          <span class="product-category">{{ product.category }}</span>
+        </div>
         <span class="price">${{ product.price }}</span>
       </div>
     </div>
   </div>
+  
   <div class="nav-links">
     <a routerLink="/">Home</a>
     <a routerLink="/products">Products</a>
