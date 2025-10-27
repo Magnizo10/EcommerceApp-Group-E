@@ -7,7 +7,6 @@ import { ProductservService } from '../services/productserv.service';
   standalone: false,
 })
 
-
 // injected the API from services
 export class ProductPageComponent implements OnInit {
   products: any[] = [];
@@ -22,5 +21,10 @@ export class ProductPageComponent implements OnInit {
         console.error('Error fetching products:', error);
       },
     });
+  }
+
+  onSelectProduct(productId: Number): void {
+   
+    console.log('here is the id of passed product', productId);
   }
 }
