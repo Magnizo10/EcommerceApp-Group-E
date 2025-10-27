@@ -5,6 +5,13 @@
   <div class="nav-links">
     <a routerLink="/">Home</a>
     <a routerLink="/products">Products</a>
-    <a routerLink="/cart">Cart</a>
+     <a class="nav-link position-relative" routerLink="/cart">
+            <i class="bi bi-cart3"></i> Cart
+            <span *ngIf="cartItemCount > 0" 
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{ cartItemCount }}
+              <span class="visually-hidden">items in cart</span>
+            </span>
+      </a>
   </div>
 </nav>
