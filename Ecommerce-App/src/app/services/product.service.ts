@@ -5,13 +5,13 @@ import { Product } from '../models/product.model';
 
 
 @Injectable({
-  providedIn: 'root' //makes this service available everywhere in your 
+  providedIn: 'root' //makes this service available everywhere in our app
 })
 export class ProductService {
 
 // Base URL of the Fake Store Api
 
-private baseUrl = 'https://fakestoreapi.com/products';
+private apiUrl = 'https://fakestoreapi.com/products';
 
   
 //HttpClient helps us make GET,POST,PUT,DELETE request
@@ -20,13 +20,13 @@ constructor(private http: HttpClient) { }
 //Fetch all products
 
 getAllProducts(): Observable<Product[]>{
-  return this.http.get<Product[]>(this.baseUrl)
+  return this.http.get<Product[]>(this.apiUrl)
 }
 
 //Fetch one product by Id
 
 getProductById(id: number): Observable<Product>{
-  return this.http.get<Product>('$this.baseUrl}/${id}');
+  return this.http.get<Product>('$this.apiUrl}/${id}');
 }
 
 //Fetch product in the same category

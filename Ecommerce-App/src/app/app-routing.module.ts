@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { DescriptionPageComponent } from './description-page/description-page.component';
 
 const routes: Routes = [
-{path: 'product/:id', component: DescriptionPageComponent},
-//
 
+//
+{path:'',redirectTo:'/description-page/1',pathMatch:'full'}
 ];
 
 @NgModule({

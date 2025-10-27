@@ -1,17 +1,22 @@
-<!-- <div class="product-details" *ngIf="product">
-  <div class="product-image">
-    <img [src]="product.image" [alt]="product.title" />
+<div *ngIf="product; else loading" class="product-details">
+  <div class="image-section">
+    <img [src]="product.image" [alt]="product.title">
   </div>
 
-  <div class="product-info">
+  <div class="info-section">
     <h2>{{ product.title }}</h2>
-    <p>{{ product.description }}</p>
-    <p><strong>Price:</strong> ${{ product.price }}</p>
+    <p class="price">\R{{ product.price }}</p>
+    <p class="description">{{ product.description }}</p>
 
     <button (click)="addToCart(product)">Add to Cart</button>
-  </div>
-</div
 
-<div *ngIf="!product">
-  Loading product details...
-</div> -->
+    <div class="similar-section">
+      <h3>Similar Products</h3>
+      <p>Coming soon...</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading product details...</p>
+</ng-template>
