@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductservService } from '../services/productserv.service';
+import { CartService ,CartItem} from '../services/cart.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -17,7 +18,8 @@ export class DescriptionPageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     public router: Router,
-    private productService: ProductservService
+    private productService: ProductservService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +39,7 @@ export class DescriptionPageComponent implements OnInit {
 
   addToCart(product: any): void {
     console.log('Added to cart:', product);
+    this.cartService.addToCart(product);
     // (You can later replace this with actual cart logic)
   }
 

@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 })
 export class CartComponent implements OnInit {
   cartItems: CartItem[] = [];
-  totalPrice = 10;
+  totalPrice = 0;
 
   constructor(private cartService: CartService) {}
 
