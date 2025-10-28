@@ -1,10 +1,11 @@
 <div class="home-container">
   <div class="slideshow-container" *ngIf="products.length > 0">
-    <div class="slide" 
-         *ngFor="let product of products; let i = index"
-         [class.active]="i === currentSlide"
-         [style.background-image]="'url(' + product.image + ')'">
-    </div>
+    <div
+      class="slide"
+      *ngFor="let product of products; let i = index"
+      [class.active]="i === currentSlide"
+      [style.background-image]="'url(' + product.image + ')'"
+    ></div>
   </div>
   <section class="hero">
     <h1>Welcome to VibeWear</h1>
