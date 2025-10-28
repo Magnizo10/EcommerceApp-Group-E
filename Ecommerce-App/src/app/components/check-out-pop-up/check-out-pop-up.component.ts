@@ -10,7 +10,8 @@ import { RouterModule,Router } from '@angular/router';
   standalone: true,
 })
 export class CheckOutPopUpComponent {
-   
+  OrderCode = Math.floor(100000 + Math.random() * 900000); // Generate a random 6-digit order code  
+
   constructor(private cart: CartService ,private router: Router) { } 
  
 
