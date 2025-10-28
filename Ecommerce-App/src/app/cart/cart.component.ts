@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CartService, CartItem } from '../services/cart.service'; // use this to import  the interface and the Service iself
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CheckOutPopUpComponent } from '../components/check-out-pop-up/check-out-pop-up.component'; // import the CheckOutPopUpComponent to be used in the cart component 
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, CheckOutPopUpComponent],
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })

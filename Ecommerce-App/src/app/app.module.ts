@@ -12,9 +12,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { CartService } from './services/cart.service';
+import { CheckOutPopUpComponent } from './components/check-out-pop-up/check-out-pop-up.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HomeComponent],
+  declarations: [AppComponent, FooterComponent, HomeComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +26,7 @@ import { CartService } from './services/cart.service';
     NavbarComponent,
     ProductPageComponent,
     DescriptionPageComponent,
+    CheckOutPopUpComponent
   ], //i imported CartComponet ,Description and  NavbarComponent, because i made it Standalone so i can be to export
   providers: [ProductservService,CartService], // imported this service here to be used across the app
   bootstrap: [AppComponent],
