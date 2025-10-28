@@ -5,6 +5,11 @@
   padding: 1rem 2rem;
   background-color: #333;
   color: white;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .search-container {
@@ -125,4 +130,11 @@
 .cart-link {
   font-size: 1.5rem;
   text-decoration: none;
+}
+
+.no-results {
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+  font-style: italic;
 }
