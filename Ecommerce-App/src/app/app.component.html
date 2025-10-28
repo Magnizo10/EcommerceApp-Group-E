@@ -2,9 +2,11 @@
    it is just for displaying a header and a list of products with their title, price, and image. -->
 
 
-   <div class="app-wrapper d-flex flex-column min-vh-100"> 
+<div class="app-wrapper">
   <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
   <app-footer></app-footer>
 </div>
 <!-- <h1 class="header">

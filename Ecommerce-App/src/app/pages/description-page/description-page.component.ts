@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductservService } from '../services/productserv.service';
-import { CartService, CartItem } from '../services/cart.service';
+import { ProductservService } from '../../services/productserv.service';
+import { CartService, CartItem } from '../../services/cart.service';
 import { CommonModule } from '@angular/common';
 declare var bootstrap: any;
 

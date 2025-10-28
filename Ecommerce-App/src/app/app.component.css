@@ -3,6 +3,12 @@
   flex-direction: column;
   min-height: 100vh;
 }
-router-outlet {
+
+.main-content {
   flex: 1;
+  padding: 1rem 0;
+}
+
+router-outlet {
+  display: block;
 }

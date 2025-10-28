@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DescriptionPageComponent } from './description-page/description-page.component';
+import { DescriptionPageComponent } from './pages/description-page/description-page.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductPageComponent } from './product-page/product-page.component';
-import { CartComponent } from './cart/cart.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },

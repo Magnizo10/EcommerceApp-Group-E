@@ -4,13 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { DescriptionPageComponent } from './description-page/description-page.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import { DescriptionPageComponent } from './pages/description-page/description-page.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { ProductservService } from './services/productserv.service';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CartComponent } from './cart/cart.component';
+import { CartComponent } from './components/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { CheckOutPopUpComponent } from './components/check-out-pop-up/check-out-pop-up.component';
 

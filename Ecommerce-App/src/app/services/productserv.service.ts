@@ -26,9 +26,6 @@ export class ProductservService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl);
   }
-<<<<<<< HEAD
-} 
-=======
 
   getProductById(id: number): Observable<Product> {
     return this.http.get<Product>(`${this.apiUrl}/${id}`);
@@ -40,4 +37,3 @@ export class ProductservService {
    }
 
 }
->>>>>>> 216e202faa2da6cf3463e36329c6f2e508071633
