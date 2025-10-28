@@ -59,3 +59,45 @@
     <p class="mt-3">Loading product details...</p>
   </div>
 </ng-template>
+
+<!-- Add to Cart Confirmation Modal -->
+<div
+  class="modal fade"
+  id="cartModal"
+  tabindex="-1"
+  aria-labelledby="cartModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="cartModalLabel">Item Added to Cart</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="mb-3">
+          ✅ <strong>{{ product.title }}</strong> has been added to your cart.
+        </p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button
+          class="btn btn-outline-secondary"
+          data-bs-dismiss="modal"
+        >
+          Continue Shopping
+        </button>
+        <button
+          class="btn btn-primary"
+          (click)="goToCart()"
+        >
+          Go to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductservService } from '../services/productserv.service';
-import { CartService ,CartItem} from '../services/cart.service';
+import { CartService, CartItem } from '../services/cart.service';
 import { CommonModule } from '@angular/common';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-description-page',
   templateUrl: './description-page.component.html',
   styleUrls: ['./description-page.component.css'],
   imports: [CommonModule],
-  standalone:true
+  standalone: true,
 })
 export class DescriptionPageComponent implements OnInit {
   product: any;
@@ -38,9 +39,19 @@ export class DescriptionPageComponent implements OnInit {
   }
 
   addToCart(product: any): void {
-    console.log('Added to cart:', product);
     this.cartService.addToCart(product);
-    // (You can later replace this with actual cart logic)
+    const modalElement = document.getElementById('cartModal');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+  }
+
+  goToCart() {
+    const modalElement = document.getElementById('cartModal');
+    if (modalElement) {
+      const modal = bootstrap.Modal.getInstance(modalElement);
+      modal?.hide();
+    }
+    this.router.navigate(['/cart']);
   }
 
   viewProduct(id: number) {
