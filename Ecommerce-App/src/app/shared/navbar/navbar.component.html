@@ -4,7 +4,7 @@
   </div>
 
   <div class="search-container">
-    <input type="text" placeholder="Search products..." [(ngModel)]="searchTerm" (blur)="hideResults()">
+    <input type="text" placeholder="Search products..."[(ngModel)]="searchTerm" (blur)="hideResults()">
     <button class="search-btn" (click)="onSearch()">🔍</button>
     <div class="search-results" *ngIf="showResults && searchResults.length > 0">
       <div class="result-item" *ngFor="let product of searchResults.slice(0, 8)" (click)="goToProduct(product.id)">
