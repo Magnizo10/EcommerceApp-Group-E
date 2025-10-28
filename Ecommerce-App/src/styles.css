@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the entire app layout vertical and stretch full height */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure the routed pages expand to fill space */
+router-outlet {
+  flex: 1;
+  display: block; /* Required for flex-growth */
+}

@@ -90,9 +90,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "bootstrap/dist/css/bootsrap.min.css","src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "bootstrap/dist/js/bootsrap.bundle.min.js"
+            ]
           }
         }
       }
