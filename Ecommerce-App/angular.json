@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -99,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "818610f8-2c01-449f-be38-c31cb9dabb48"
+    "analytics": "577a49ff-1dcf-48ed-9a6a-338a2686a480"
   }
 }

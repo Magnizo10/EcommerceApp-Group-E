@@ -1,31 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
+import { DescriptionPageComponent } from './pages/description-page/description-page.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { ProductservService } from './services/productserv.service';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-
+import { CartComponent } from './components/cart/cart.component';
+import { CartService } from './services/cart.service';
+import { CheckOutPopUpComponent } from './components/check-out-pop-up/check-out-pop-up.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    HomeComponent,
-  ],
+  declarations: [AppComponent, FooterComponent, HomeComponent,],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
-  ],
-  providers: [],
+    CartComponent,
+    NavbarComponent,
+    ProductPageComponent,
+    DescriptionPageComponent,
+    CheckOutPopUpComponent
+  ], //i imported CartComponet ,Description and  NavbarComponent, because i made it Standalone so i can be to export
+  providers: [ProductservService,CartService], // imported this service here to be used across the app
   bootstrap: [AppComponent],
 })
-
 export class AppModule {}
